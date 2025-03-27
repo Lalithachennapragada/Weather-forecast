@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'weatherProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'lalitha-capstone-stack-weatherrds-e5qeazdko4lw',  # Database name from your CloudFormation template
+        'USER': 'lalitha',      # Username from your CloudFormation parameters
+        'PASSWORD': 'Lab-12345678',  # The password you provided when creating the stack
+        'HOST': 'lalitha-capstone-stack-weatherrds-e5qeazdko4lw.c1y6g4aksg48.us-east-1.rds.amazonaws.com',  # RDS endpoint from AWS Console
+        'PORT': '5432',
     }
 }
 
